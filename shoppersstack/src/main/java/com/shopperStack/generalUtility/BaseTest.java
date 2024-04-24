@@ -61,8 +61,10 @@ public class BaseTest  {
 		report.attachReporter(spark);
 		test = report.createTest("Demo");
 		
-		String url= file.readPropertyFile("url");
-		String browser= file.readPropertyFile("browser");
+//		String url= file.readPropertyFile("url");
+//		String browser= file.readPropertyFile("browser");
+		String url=System.getProperty("url");
+		String browser=System.getProperty("browser");
 		
 		 if(browser.equals("chrome")) {
 			 driver= new ChromeDriver();
